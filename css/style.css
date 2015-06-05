@@ -1,0 +1,85 @@
+﻿
+/*=============================================================
+    Authour URI: www.binarytheme.com
+    License: Commons Attribution 3.0
+
+    http://creativecommons.org/licenses/by/3.0/
+
+    100% Free To use For Personal And Commercial Use.
+    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
+   
+    ========================================================  */
+/* =============================================================
+   GENERAL STYLES
+ ============================================================ */
+body {
+    font-family: 'Open Sans', sans-serif;
+   
+}
+
+.thumbnail {
+    background-color: #333;
+    border-color: #333;
+}
+
+
+
+
+/* =============================================================
+   HOME/VEDIO SECTION STYLES
+ ============================================================ */
+#home-sec {
+    height:900px;
+    color:#ffffff;
+    text-align:center;
+    border-bottom:4px solid #000;
+}
+
+    #home-sec .overlay {
+        background-color:rgba(0, 0, 0, 0.8);
+        min-height:900px;
+        opacity: 0.7;
+    }
+    #home-sec h1 {
+        padding-top:150px;
+        font-size:50px;
+        font-weight:bold;
+        padding-bottom:20px;
+    }
+        #home-sec h1 i {
+            color:#f00;
+        }
+
+/* =============================================================
+   Scrollable Menu Style
+ ============================================================ */
+
+ .scrollable-menu {
+    height: auto;
+    max-height: 600px;
+    overflow-x: hidden;
+}
+
+.alt2
+{
+    background: #333;
+    min-height: 150px;
+    color: #fff;
+    margin-top:10px;
+}
+
+.thumbnail img{
+    opacity: 1;
+}
+
+.thumbnail img{
+    opacity:0.5;
+}
+
+.form-group .help-block {
+  display: none;
+}
+
+.form-group.has-error .help-block {
+  display: block;
+}
