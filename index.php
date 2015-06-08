@@ -85,72 +85,68 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                   <div class="form-group col-md-3">
                       <input type="tel" id="element-3" name="tel" class="form-control" placeholder="Enter phone number" <?php echo isset($fields['tel']) ? ' value="' . e($fields['tel']) . '"' : '' ?> required/>
                   </div>
-                <div class="form-group">
-                  <div class="dropdown col-md-3">
-                      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-expanded="true" required>
-                      Select County
-                      <span class="caret" name="county" required> </span>
-                      </button>
-                        <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu" required>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Antrim</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Armagh</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Carlow</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Cavan</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Clare</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Cork</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Derry</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Donegal</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Down</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Dublin</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Fermanagh</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Galway</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Kerry</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Kildare</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Kilkenny</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Laois</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Leitrim</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Limerick</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Longford</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Louth</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Mayo</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Meath</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Monaghan</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Offaly</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Roscommon</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Sligo</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Tipperary</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Tyrone</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Waterford</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Westmeath</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Wexford</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Co Wicklow</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 1</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 2</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 3</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 4</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 5</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 6</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 6W</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 7</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 8</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 9</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 10</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 11</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 12</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 13</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 14</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 15</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 16</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 17</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 18</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 19</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 20</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 21</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 22</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 23</a></li>
-                          <li role="presentation"><a role="menuitem" tabindex="-1">Dublin 24</a></li>
-                        </ul>
-                  </div>
+                <div class="form-group col-md-3" required>
+                  <select class="form-control input-md" name="county-select" <?php echo isset($fields['county-select']) ? ' value="' . e($fields['county-select']) . '"' : '' ?> required>
+                    <option value="Co Antrim">Co Antrim</option>
+                    <option value="Co Armagh">Co Armagh</option>
+                    <option value="Co Carlow">Co Carlow</option>
+                    <option value="Co Cavan">Co Cavan</option>
+                    <option value="Co Clare">Co Clare</option>
+                    <option value="Co Cork">Co Cork</option>
+                    <option value="Co Cork">Co Derry</option>
+                    <option value="Co Derry">Co Donegal</option>
+                    <option value="Co Down">Co Down</option>
+                    <option value="Co Dublin">Co Dublin</option>
+                    <option value="Co Fermanagh">Co Fermanagh</option>
+                    <option value="Co Galway">Co Galway</option>
+                    <option value="Co Kerry">Co Kerry</option>
+                    <option value="Co Kildare">Co Kildare</option>
+                    <option value="Co Kilkenny">Co Kilkenny</option>
+                    <option value="Co Laois">Co Laois</option>
+                    <option value="Co Leitrim">Co Leitrim</option>
+                    <option value="Co Limerick">Co Limerick</option>
+                    <option value="Co Longford">Co Longford</option>
+                    <option value="Co Louth">Co Louth</option>
+                    <option value="Co Mayo">Co Mayo</option>
+                    <option value="Co Meath">Co Meath</option>
+                    <option value="Co Monaghan">Co Monaghan</option>
+                    <option value="Co Offaly">Co Offaly</option>
+                    <option value="Co Roscommon">Co Roscommon</option>
+                    <option value="Co Sligo">Co Sligo</option>
+                    <option value="Co Tipperary">Co Tipperary</option>
+                    <option value="Co Tryone">Co Tryone</option>
+                    <option value="Co Waterford">Co Waterford</option>
+                    <option value="Co Westmeath">Co Westmeath</option>
+                    <option value="Co Wexford">Co Wexford</option>
+                    <option value="Co Wicklow">Co Wicklow</option>
+                    <option value="Co Dublin 1">Co Dublin 1</option>
+                    <option value="Co Dublin 2">Co Dublin 2</option>
+                    <option value="Co Dublin 3">Co Dublin 3</option>
+                    <option value="Co Dublin 4">Co Dublin 4</option>
+                    <option value="Co Dublin 5">Co Dublin 5</option>
+                    <option value="Co Dublin 6">Co Dublin 6</option>
+                    <option value="Co Dublin 6W">Co Dublin 6W</option>
+                    <option value="Co Dublin 7">Co Dublin 7</option>
+                    <option value="Co Dublin 8">Co Dublin 8</option>
+                    <option value="Co Dublin 9">Co Dublin 9</option>
+                    <option value="Co Dublin 10">Co Dublin 10</option>
+                    <option value="Co Dublin 11">Co Dublin 11</option>
+                    <option value="Co Dublin 12">Co Dublin 12</option>
+                    <option value="Co Dublin 13">Co Dublin 13</option>
+                    <option value="Co Dublin 14">Co Dublin 14</option>
+                    <option value="Co Dublin 15">Co Dublin 15</option>
+                    <option value="Co Dublin 16">Co Dublin 16</option>
+                    <option value="Co Dublin 17">Co Dublin 17</option>
+                    <option value="Co Dublin 18">Co Dublin 18</option>
+                    <option value="Co Dublin 19">Co Dublin 19</option>
+                    <option value="Co Dublin 20">Co Dublin 20</option>
+                    <option value="Co Dublin 21">Co Dublin 21</option>
+                    <option value="Co Dublin 22">Co Dublin 22</option>
+                    <option value="Co Dublin 23">Co Dublin 23</option>
+                    <option value="Co Dublin 24">Co Dublin 24</option>
+
+                  </select>
+              
                 </div>
 
                   <hr>
@@ -321,8 +317,6 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
     <script src="js/custom.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
-    <!-- Form Validation -->
-    <script src="http://code.angularjs.org/1.2.5/angular.js" data-semver="1.2.5" data-require="angular.js@1.2.5"></script>
     <script src="js/showErrors.js"></script>
     
 
