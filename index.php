@@ -53,7 +53,6 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
      
     <!--Video END-->
 
-
     <!-- Form Section -->
 
     <div id="register" class="jumbotron">
@@ -65,28 +64,25 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
           </div>
 
         </div>
-
         <hr>
         <h3 class="text-center">
           Volunteer as a Big Brother or Big Sister to a young person who needs it.
         </h3>
         <hr>
         <h4 class="text-center">#bigbrotherbigsister #anhouraweek</h4>
-
         <hr>
-
-           <form name="form" action="register.php" role="form" method="POST">
-                  <div class="form-group col-md-3"> 
+           <form id="mailgun" name="form" role="form" method="POST">
+                  <div class="form-control-group col-md-3"> 
                       <input type="text" id="element-1" name="name" class="form-control" placeholder="Enter Name"  <?php echo isset($fields['name']) ? ' value="' . e($fields['name']) . '"' : '' ?> required/>
                   </div>
-                  <div class="form-group col-md-3">
+                  <div class="form-control-group col-md-3">
                       <input type="email" id="element-2" name="email" class="form-control col-md" placeholder="Enter Email" <?php echo isset($fields['email']) ? ' value="' . e($fields['email']) . '"' : '' ?> required/>
                   </div>
-                  <div class="form-group col-md-3">
+                  <div class="form-control-group col-md-3">
                       <input type="tel" id="element-3" name="tel" class="form-control" placeholder="Enter phone number" <?php echo isset($fields['tel']) ? ' value="' . e($fields['tel']) . '"' : '' ?> required/>
                   </div>
-                <div class="form-group col-md-3" required>
-                  <select class="form-control input-md" name="county-select" <?php echo isset($fields['county-select']) ? ' value="' . e($fields['county-select']) . '"' : '' ?> required>
+                <div class="form-control-group col-md-3">
+                  <select class="form-control input-md" type="dropdown" name="county-select" <?php echo isset($fields['county-select']) ? ' value="' . e($fields['county-select']) . '"' : '' ?> required>
                     <option value="Co Antrim">Co Antrim</option>
                     <option value="Co Armagh">Co Armagh</option>
                     <option value="Co Carlow">Co Carlow</option>
@@ -144,11 +140,8 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                     <option value="Co Dublin 22">Co Dublin 22</option>
                     <option value="Co Dublin 23">Co Dublin 23</option>
                     <option value="Co Dublin 24">Co Dublin 24</option>
-
                   </select>
-              
                 </div>
-
                   <hr>
                   <hr>
                   <hr>  
@@ -183,12 +176,10 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
       </div>
     </div>
 
-
     <!-- END of form section -->
 
     <!-- Sponsor section -->
 
-      
       <div class="container">
 
       <h3 class="text-center">Our Testimonals</h3>
@@ -233,8 +224,6 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
 
       <br>
       <br>
-
-
 
     <!-- End of Sponsor section -->
     <footer>
@@ -292,20 +281,14 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
       </div>
     </footer>
 
-  
-    
-
-
-
-
     <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
     <!-- CORE JQUERY  -->
-    <script src="js/jquery-1.11.1.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- BOOTSTRAP SCRIPTS  -->
     <script src="js/bootstrap.js"></script>
      <!-- EASING SCROLL SCRIPTS PLUGIN  -->
     <script src="js/jquery.easing.min.js"></script>
-     <!-- VEDIO SCRIPT SCRIPTS  -->
+     <!-- VIDEO SCRIPT SCRIPTS  -->
     <script src="js/jquery.mb.YTPlayer.js"></script>
      <!-- PRETTY PHOTO SCRIPTS  -->
     <script src="js/jquery.prettyPhoto.js"></script>
@@ -317,10 +300,10 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
     <script src="js/custom.js"></script>
     <script src="js/respond.min.js"></script>
     <script src="js/html5shiv.min.js"></script>
-    <script src="js/showErrors.js"></script>
-    
+    <!-- FORM SCRIPTS -->
+    <script src="js/mailgun.js"></script>
 
-  <script>
+    <script>
           $(function() {
           $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -335,12 +318,7 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
             }
           });
         });
-
-          $(".dropdown-menu li a").click(function(){
-            var selText = $(this).text();
-            $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-          });
-  </script>
+    </script>
     
 </body>
 </html>

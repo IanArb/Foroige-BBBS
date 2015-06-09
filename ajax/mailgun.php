@@ -41,9 +41,9 @@ function sendMailgun($data) {
   $name = $data['name'];
   $email = $data['email'];
   $tel = $data['tel'];
-  $county = $data['county-select'];
+  $county-select = $data['county-select'];
  
-  $messageBody = '<p><strong>From:</strong> '. $name. '</p>'."\n".'<p><strong>Email:</strong> '. $email. '</p>'."\n".'<p><strong>Telephone:</strong> '. $tel. '</p>'."\n".'<p><strong>County:</strong> '. $county. '</p>';
+  $messageBody = '<p><strong>From:</strong> '. $name. '</p>'."\n".'<p><strong>Email:</strong> '. $email. '</p>'."\n".'<p><strong>Telephone:</strong> '. $tel. '</p>'."\n".'<p><strong>County:</strong> '. $county-select. '</p>';
  
   $config = array();
   $config['api_key'] = $api_key;
@@ -75,4 +75,4 @@ function sendMailgun($data) {
  
 }
 
-?
+?>

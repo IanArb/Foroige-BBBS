@@ -1,12 +1,12 @@
 var mailgunURL;
  
-mailgunURL = window.location.protocol + "//" + window.location.hostname + 'mailgun.php';
+mailgunURL = 'register.php';
  
 $('#mailgun').on('submit',function(e) {
   e.preventDefault();
  
   $('#mailgun *').fadeOut(200);
-  $('#mailgun').prepend('Your submission is being processed...');
+  $('#mailgun').prepend('Thanks we will in touch!');
  
   $.ajax({
     type     : 'POST',

@@ -47,7 +47,6 @@ if(isset($_POST['name'], $_POST['email'], $_POST['tel'], $_POST['county-select']
 		$m->AddAddress('ian.arbuckle18@gmail.com', 'Foroige');
 
 		if($m->send()){
-			//$result = 'Thanks, we will be in touch!';
 			header('Location: index.php');
 		} else{
 			$errors[] = 'Sorry could not send email. Try again later.';
