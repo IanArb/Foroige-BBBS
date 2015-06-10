@@ -1,3 +1,4 @@
+
 <?php 
 error_reporting(E_ALL);
 
@@ -15,8 +16,8 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="Big Brother/Big Sister" />
+    <meta name="author" content="Foroige" />
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
@@ -30,26 +31,28 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
 
 </head>
 <body>
-
+    
     <!-- Video Section -->
-    <div id="home">
-      <section id="home-sec" class="player .overlay" data-property="{videoURL:'AtmRGDjEUk0',containment:'self', showControls:false, autoPlay:true, loop:true, vol:50, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default', optimizeDisplay:true}">
-           <!-- change Ycv5fNd4AeM to your youtube url-->
-              <div class="overlay">
-                 <div class="container">
-                    <div class="row text-center">
-                        <div class="col-md-6 col-md-offset-3">
-                          <h1>Express your interest!</h1> 
-                              <h3>Volunteer as a Big Brother or Big Sister to a young person who needs it.</h3>
-                              <br>
-                              <a href="#register"><button  type="button" class="btn btn-primary btn-lg btn-block"><h2>Click me to volunteer!</h2></button></a>
-                        </div>
+    <header>
+      <div id="home">
+        <section id="home-sec" class="player .overlay" data-property="{videoURL:'AtmRGDjEUk0',containment:'self', showControls:false, autoPlay:true, loop:true, vol:50, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default', optimizeDisplay:true}">
+             <!-- change Ycv5fNd4AeM to your youtube url-->
+                <div class="overlay">
+                   <div class="container">
+                      <div class="row text-center">
+                          <div class="col-md-6 col-md-offset-3">
+                            <h1>Express your interest!</h1> 
+                                <h3>Volunteer as a Big Brother or Big Sister to a young person who needs it.</h3>
+                                <br>
+                                <a href="#register"><button  type="button" class="btn btn-primary btn-lg btn-block"><h2>Click me to volunteer!</h2></button></a>
+                          </div>
+                      </div>
                     </div>
-                  </div>
-             </div>
-              
-      </section>
-    </div>
+               </div>
+                
+        </section>
+      </div>
+    </header>
      
     <!--Video END-->
 
@@ -72,16 +75,16 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
         <h4 class="text-center">#bigbrotherbigsister #anhouraweek</h4>
         <hr>
            <form id="mailgun" name="form" role="form" method="POST">
-                  <div class="form-control-group col-md-3"> 
+                  <div class="form-group col-md-3"> 
                       <input type="text" id="element-1" name="name" class="form-control" placeholder="Enter Name"  <?php echo isset($fields['name']) ? ' value="' . e($fields['name']) . '"' : '' ?> required/>
                   </div>
-                  <div class="form-control-group col-md-3">
+                  <div class="form-group col-md-3">
                       <input type="email" id="element-2" name="email" class="form-control col-md" placeholder="Enter Email" <?php echo isset($fields['email']) ? ' value="' . e($fields['email']) . '"' : '' ?> required/>
                   </div>
-                  <div class="form-control-group col-md-3">
+                  <div class="form-group col-md-3">
                       <input type="tel" id="element-3" name="tel" class="form-control" placeholder="Enter phone number" <?php echo isset($fields['tel']) ? ' value="' . e($fields['tel']) . '"' : '' ?> required/>
                   </div>
-                <div class="form-control-group col-md-3">
+                <div class="form-group col-md-3">
                   <select class="form-control input-md" type="dropdown" name="county-select" <?php echo isset($fields['county-select']) ? ' value="' . e($fields['county-select']) . '"' : '' ?> required>
                     <option value="Co Antrim">Co Antrim</option>
                     <option value="Co Armagh">Co Armagh</option>
@@ -142,9 +145,9 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                     <option value="Co Dublin 24">Co Dublin 24</option>
                   </select>
                 </div>
-                  <hr>
-                  <hr>
-                  <hr>  
+                  <br>
+                  <br>
+                  <br>  
                    <div class="form-group">
                        <div class="row center-block">
                             <div class="col-sm-5 col-sm-offset-5">

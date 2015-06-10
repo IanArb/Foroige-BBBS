@@ -33,6 +33,10 @@ body {
     color:#ffffff;
     text-align:center;
     border-bottom:4px solid #000;
+    background: url("../img/loading.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
     #home-sec .overlay {
