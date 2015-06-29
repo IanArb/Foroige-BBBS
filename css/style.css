@@ -26,7 +26,7 @@ body {
 
 
 /* =============================================================
-   HOME/VEDIO SECTION STYLES
+   HOME/VIDEO SECTION STYLES
  ============================================================ */
 #home-sec {
     height:900px;
@@ -43,15 +43,25 @@ body {
         background-color:rgba(0, 0, 0, 0.8);
         min-height:900px;
         opacity: 0.7;
+        display:none;
     }
     #home-sec h1 {
-        padding-top:150px;
+        padding-top:250px;
         font-size:50px;
         font-weight:bold;
         padding-bottom:20px;
+        font-family: 'Permanent Marker', cursive;
     }
         #home-sec h1 i {
             color:#f00;
+        }
+        #home-sec h3 {
+            font-size: 24px;
+            font-family: 'Permanent Marker', cursive;
+        }
+        #home-sec h2 {
+            font-size: 30px;
+            font-family: 'Permanent Market', cursive;
         }
 
 /* =============================================================
@@ -64,6 +74,9 @@ body {
     overflow-x: hidden;
 }
 
+/* =============================================================
+   Footer
+ ============================================================ */
 .alt2
 {
     background: #333;
@@ -71,6 +84,10 @@ body {
     color: #fff;
     margin-top:10px;
 }
+
+/* =============================================================
+   Social Media Icons
+ ============================================================ */
 
 .thumbnail img{
     opacity: 1;
@@ -80,10 +97,20 @@ body {
     opacity:0.5;
 }
 
-.form-group .help-block {
-  display: none;
+/* =============================================================
+   Extras
+ ============================================================ */
+
+.glyphicon-circle-arrow-down{
+    font-size: 4em;
 }
 
-.form-group.has-error .help-block {
-  display: block;
+.thumbnail{
+    opacity: .5;
 }
+
+.thumbnail:hover {
+    opacity: 1;
+}
+
+

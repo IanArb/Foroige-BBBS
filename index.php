@@ -28,6 +28,7 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
     <link href="css/style.css" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -35,16 +36,16 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
     <!-- Video Section -->
     <header>
       <div id="home">
-        <section id="home-sec" class="player .overlay" data-property="{videoURL:'AtmRGDjEUk0',containment:'self', showControls:false, autoPlay:true, loop:true, vol:50, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default', optimizeDisplay:true}">
+        <section id="home-sec" class="player .overlay" data-property="{videoURL:'KFxEyNQUZr4',containment:'self', showControls:false, autoPlay:true, loop:true, vol:50, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default', optimizeDisplay:true}">
              <!-- change Ycv5fNd4AeM to your youtube url-->
-                <div class="overlay">
+                <div class="overlay" id="fade">
                    <div class="container">
                       <div class="row text-center">
                           <div class="col-md-6 col-md-offset-3">
                             <h1>Express your interest!</h1> 
                                 <h3>Volunteer as a Big Brother or Big Sister to a young person who needs it.</h3>
                                 <br>
-                                <a href="#register"><button  type="button" class="btn btn-primary btn-lg btn-block"><h2>Click me to volunteer!</h2></button></a>
+                                <a href="#register"><button  type="button" class="btn btn-primary btn-lg btn-block"><h2>Volunteer Now!</h2></button></a>
                           </div>
                       </div>
                     </div>
@@ -150,8 +151,8 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                   <br>  
                    <div class="form-group">
                        <div class="row center-block">
-                            <div class="col-sm-5 col-sm-offset-5">
-                            <button type="submit" name="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-1">Register now!</button>
+                            <div class="col-md-2 col-sm-offset-5">
+                                <button type="submit" name="submit" class="btn btn-primary">Register now!</button>
                             </div>
                             
                         </div>
@@ -169,12 +170,15 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                   
                   </div>  
            </form>
-          <hr>
-          <hr>
-          <h4 class="text-center">
-            The Big Brother Big Sister programme is operated in Ireland by Foróige,
-            the National Youth Development Organisation.
-          </h4>
+
+           <div class="row">
+              <div class="col-md-2 col-md-offset-5">
+                  <a href="#testimonal">
+                    <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                  </a>
+              </div>
+           </div>
+          
       
       </div>
     </div>
@@ -183,7 +187,7 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
 
     <!-- Sponsor section -->
 
-      <div class="container">
+      <div id="testimonal" class="container">
 
       <h3 class="text-center">Our Testimonals</h3>
       <hr>
@@ -200,7 +204,7 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
         <div class="col-sm-3 col-md-3">
           
           <div class="caption">
-                <h3>Little Sister, Donegal</h3>
+                <h3>Big Sister, Donegal</h3>
                 <p class="text-justify">"My Little Sister and I have done lots of fun things together and each week I look forward to meeting her. She is a delight to be with and we always have a laugh. 
                 Last week we chased the sunset until we got to a place where we could watch the sun sink into the sea! It's not everyone you could do that with, is it?”</p>
             </div>
@@ -253,7 +257,7 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
           <br>
           
 
-            <h3 class="text-center">Keep Updated On Social Media!</h3>
+            <h3 class="text-center">Connect with us</h3>
             <br>
             
             <div class="col-sm-3 col-md-3">
@@ -321,6 +325,12 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
             }
           });
         });
+
+          $(document).ready(function(){
+            setInterval(function(){
+                $('#fade').fadeIn(1000);
+              }, 4300);
+            });
     </script>
     
 </body>
