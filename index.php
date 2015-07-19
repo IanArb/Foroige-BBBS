@@ -24,57 +24,58 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
     <title>Express Your Interest | Foroige</title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     <link href="css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- CUSTOM STYLE CSS -->
     <link href="css/style.css" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 
+
 </head>
 <body>
-    
     <!-- Video Section -->
     <header>
       <div id="home">
         <section id="home-sec" class="player .overlay" data-property="{videoURL:'KFxEyNQUZr4',containment:'self', showControls:false, autoPlay:true, loop:true, vol:50, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default', optimizeDisplay:true}">
              <!-- change Ycv5fNd4AeM to your youtube url-->
                 <div class="overlay" id="fade">
+
                    <div class="container">
                       <div class="row text-center">
                           <div class="col-md-6 col-md-offset-3">
                             <h1>Express your interest!</h1> 
                                 <h3>Volunteer as a Big Brother or Big Sister to a young person who needs it.</h3>
                                 <br>
-                                <a href="#register"><button  type="button" class="btn btn-primary btn-lg btn-block"><h2>Volunteer Now!</h2></button></a>
+                                <a href="#register"><button  type="button" class="btn btn-primary btn-md btn-block"><h2>Volunteer Now!</h2></button></a>
                           </div>
                       </div>
                     </div>
                </div>
                 
         </section>
-      </div>
+        </div>
     </header>
      
     <!--Video END-->
 
     <!-- Form Section -->
-
     <div id="register" class="jumbotron">
       <div class="container">
 
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
-            <img src="img/bbbs.png" class="img-responsive" alt="logo"/>
+            
           </div>
 
         </div>
-        <hr>
+        <br>
         <h3 class="text-center">
           Volunteer as a Big Brother or Big Sister to a young person who needs it.
         </h3>
-        <hr>
+        <br>
         <h4 class="text-center">#bigbrotherbigsister #anhouraweek</h4>
-        <hr>
+        <br>
            <form id="mailgun" name="form" role="form" method="POST">
                   <div class="form-group col-md-3"> 
                       <input type="text" id="element-1" name="name" class="form-control" placeholder="Enter Name"  <?php echo isset($fields['name']) ? ' value="' . e($fields['name']) . '"' : '' ?> required/>
@@ -87,7 +88,7 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                   </div>
                 <div class="form-group col-md-3">
                   <select class="form-control input-md" type="dropdown" name="county-select" <?php echo isset($fields['county-select']) ? ' value="' . e($fields['county-select']) . '"' : '' ?> required>
-                    <option value="Co Antrim">Co Antrim</option>
+                    <option value="Co Antrim" required>Co Antrim</option>
                     <option value="Co Armagh">Co Armagh</option>
                     <option value="Co Carlow">Co Carlow</option>
                     <option value="Co Cavan">Co Cavan</option>
@@ -151,11 +152,13 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                   <br>  
                    <div class="form-group">
                        <div class="row center-block">
-                            <div class="col-md-2 col-sm-offset-5">
+                            <div class="col-md-2 col-md-push-5">
                                 <button type="submit" name="submit" class="btn btn-primary">Register now!</button>
                             </div>
                             
                         </div>
+                   <br>
+                   <br>
                    <br>
                    <br>
                     <?php if(!empty($errors)): ?>
@@ -170,118 +173,79 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
                   
                   </div>  
            </form>
-
-           <div class="row">
-              <div class="col-md-2 col-md-offset-5">
-                  <a href="#testimonal">
-                    <span class="glyphicon glyphicon-circle-arrow-down"></span>
-                  </a>
-              </div>
-           </div>
-          
-      
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
-    </div>
+   </div>
+  
 
     <!-- END of form section -->
 
     <!-- Sponsor section -->
-
       <div id="testimonal" class="container">
 
       <h3 class="text-center">Our Testimonals</h3>
-      <hr>
+      <br>
 
         <div class="row">
           <div class="col-sm-3 col-md-3">
-            <div class="caption">
-                  <h3>Big Brother, Galway</h3>
-                  <p class="text-justify">"I have a strong belief that young people need alternatives to what is available nowadays.... 
-                  the Big Brother Big Sister Programme is a nice alternative, and it is a way for me to contribute to that, so rather than just saying it, it's a matter of doing it!"</p>
-
-            </div>
+            <blockquote>
+                  <p>It's good fun - myself and my little brother have a bit of craic together, and I try to encourage and support him in the things he has going on!</p>
+                  <footer>Big Brother, Dublin</footer>
+            </blockquote>
           </div>
         <div class="col-sm-3 col-md-3">
-          
-          <div class="caption">
-                <h3>Big Sister, Donegal</h3>
-                <p class="text-justify">"My Little Sister and I have done lots of fun things together and each week I look forward to meeting her. She is a delight to be with and we always have a laugh. 
-                Last week we chased the sunset until we got to a place where we could watch the sun sink into the sea! It's not everyone you could do that with, is it?”</p>
-            </div>
-          
+            <blockquote>
+                <p>My Little Sister and I have done lots of fun things together and each week I look forward to meeting her. She is a delight to be with and we always have a laugh. 
+                </p>
+                <footer>Big Sister, Donegal</footer>
+            </blockquote>
         </div>
         <div class="col-sm-3 col-md-3">
-         
-            <div class="caption">
-                <h3>Little Sister, Dublin</h3>
-                <p class="text-justify">“I have got more confident and can be myself around people. Thank you for your help, you’ve made a difference.” </p>
-            </div>
-          
+            <blockquote>
+                <p>I have got more confident and can be myself around people. Thank you for your help, you’ve made a difference. </p>
+                <footer>Little Sister, Dublin</footer>
+            </blockquote>
         </div>
         <div class="col-sm-3 col-md-3">
-         
-            <div class="caption">
-                <h3>Little Brother, Sligo</h3>
-                <p class="text-justify">“To have a friend for life, that gave me the confidence to stand up and sing in front of a crowd.”</p>
-            </div>
+          <blockquote>
+                <p>To have a friend for life, that gave me the confidence to stand up and sing in front of a crowd.</p>
+                <footer>Little Brother, Sligo</footer>
+          </blockquote>
         </div>
       </div>
 
       </div>
-
-      <br>
-      <br>
+   
+      <br><br>
 
     <!-- End of Sponsor section -->
     <footer>
       <div class="alt2">
         <div class="container">
-        <div class="row row-centered">
-        <br>
-        <br>
-          <footer class="text-center">
-            &copy; Foroige<br />
-            <br>
-            <a href="#home">
-              <button type="button" class="btn btn-primary btn-md">
-              <span class="glyphicon glyphicon-circle-arrow-up"></span> Back to top
-            </button>
-            </a>
-            <a href="http://www.foroige.ie" target="_blank">
-              <button type="button" class="btn btn-primary btn-md">
-                <span class="glyphicon glyphicon-circle-arrow-right"></span> Main Website
-              </button>
-            </a>
-          </footer>
-
-          <br>
-          
-
-            <h3 class="text-center">Connect with us</h3>
-            <br>
-            
-            <div class="col-sm-3 col-md-3">
-              <div class="thumbnail">
-                <a href="https://www.facebook.com/foroige" target="_blank"><img src="img/social/fb.png" alt="facebook"/></a>
+          <div class="row row-centered">
+              <div class="component">
+                <h3 id="title" class="text-center">Connect with us</h3>
+                <br>
+                    <a href="https://www.facebook.com/foroige" class="icon icon-cube facebook" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/foroige" class="icon icon-cube twitter" target="_blank">Twitter</a>
+                    <a href="https://plus.google.com/+foroige" class="icon icon-cube googleplus" target="_blank">Google+</a>
               </div>
+              <br>
+                <footer class="text-center">
+                &copy; Foroige<br />
+                <br>
+                    <a href="#home">
+                      <button id="btn" type="button" class="btn btn-primary btn-md">
+                      <span class="glyphicon glyphicon-circle-arrow-up"></span> Back to top
+                    </button>
+                    </a>
+                    <a href="http://www.foroige.ie" target="_blank">
+                      <button id="btn" type="button" class="btn btn-primary btn-md">
+                        <span class="glyphicon glyphicon-circle-arrow-right"></span> Foroige Website
+                      </button>
+                    </a>
+                </footer>
             </div>
-            <div class="col-sm-3 col-md-3">
-              <div class="thumbnail">
-                <a href="https://twitter.com/foroige" target="_blank"><img src="img/social/tw.png" alt="twitter"/></a>
-              </div>
-            </div>
-            <div class="col-sm-3 col-md-3">
-              <div class="thumbnail">
-                <a href="https://www.youtube.com/user/ForoigeChannel" target="_blank"><img src="img/social/yt.png" alt="youtube"/></a>
-              </div>
-            </div>
-            <div class="col-sm-3 col-md-3">
-              <div class="thumbnail">
-                <a href="https://instagram.com/foroige/" target="_blank"><img src="img/social/insta.png" alt="instagram"/></a>
-              </div>
-            </div>
-
-          </div>
           <br>
           <br>
         </div>

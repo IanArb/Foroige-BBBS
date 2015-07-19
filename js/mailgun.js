@@ -5,8 +5,16 @@ mailgunURL = 'register.php';
 $('#mailgun').on('submit',function(e) {
   e.preventDefault();
  
+ var response = "Thanks we will be in touch!";
+
   $('#mailgun *').fadeOut(200);
-  $('#mailgun').prepend('Thanks we will in touch!');
+  $('#mailgun').prepend('<div class="form-group>'+
+                           '<div class="row center-block">'+
+                              '<div class="col-md-4 col-md-push-5">'+
+                                '<div>'+'<h4 class="text-center">'+response+'</h4>'+'</div>'+
+                              '</div>'+
+                            '</div>'+
+                         '</div>');
  
   $.ajax({
     type     : 'POST',
