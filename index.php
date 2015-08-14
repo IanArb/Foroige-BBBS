@@ -30,17 +30,22 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <!-- Pre loading -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="js/preloader.js"></script>
 
 
 </head>
 <body>
+	<!-- Aminated Page Loader -->
+	<div class="se-pre-con"></div>
     <!-- Video Section -->
     <header>
       <div id="home">
         <section id="home-sec" class="player .overlay" data-property="{videoURL:'KFxEyNQUZr4',containment:'self', showControls:false, autoPlay:true, loop:true, vol:50, mute:true, startAt:0, opacity:1, addRaster:true, quality:'default', optimizeDisplay:true}">
              <!-- change Ycv5fNd4AeM to your youtube url-->
-                <div class="overlay" id="fade">
-
+                <div class="overlay">
                    <div class="container">
                       <div class="row text-center">
                           <div class="col-md-6 col-md-offset-3">
@@ -289,12 +294,6 @@ $result = isset($_SESSION['result']) ? $_SESSION['result'] : [];
             }
           });
         });
-
-          $(document).ready(function(){
-            setInterval(function(){
-                $('#fade').fadeIn(1000);
-              }, 4300);
-            });
     </script>
     
 </body>
